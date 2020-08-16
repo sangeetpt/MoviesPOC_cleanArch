@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+  <ImageView
+      style="@style/MoviePoster"
+      android:id="@+id/moviePoster"
+      android:layout_height="80dp"
+      android:layout_width="80dp"
+      />
+
+
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margindp"
+        android:layout_marginTop="@dimen/margindp"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/largeText"
+        android:textStyle="bold|italic"
+        tools:text="title"/>
+
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/smallText"
+        android:textColor="@android:color/black"
+        tools:text="releaseYear"/>
+  </LinearLayout>
+
+  <!-- Used for the ripple effect on touch -->
+  <LinearLayout
+      android:id="@+id/movieHolder"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      />
+</LinearLayout>

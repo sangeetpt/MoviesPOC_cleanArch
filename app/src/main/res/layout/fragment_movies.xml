@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+  <Button
+      android:id="@+id/btnLogout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/logout"
+      android:textColor="@color/colorBlue"
+      android:background="@null"
+      android:gravity="center|end"
+      android:textAllCaps="false"
+      android:padding="5dp"
+      android:layout_marginEnd="5dp" />
+  <androidx.appcompat.widget.SearchView
+      android:id="@+id/titleSearch"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/btnLogout"
+      android:layout_marginLeft="10dp"
+      android:queryHint="Search"
+      app:queryHint="Search"
+      app:defaultQueryHint="Search"
+      android:iconifiedByDefault="false"
+      app:iconifiedByDefault="false"
+      app:layout_constraintStart_toStartOf="parent"
+      app:queryBackground="@null"
+      android:background="@drawable/round_edge_corner"
+      android:layout_marginTop="10dp"
+      android:voiceSearchMode="showVoiceSearchButton|launchRecognizer"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/movieList"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="3dp"
+      android:layout_below="@+id/titleSearch"/>
+<!--      android:background="@color/colorAccent"-->
+
+
+  <ImageView
+      android:id="@+id/emptyView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:src="@drawable/ic_launcher_background"
+      android:visibility="gone"
+      android:scaleType="center"
+      android:paddingBottom="160dp"
+      android:contentDescription="@string/content_description_empty" />
+
+</RelativeLayout>
